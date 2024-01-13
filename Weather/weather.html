@@ -1,1 +1,78 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="weather.css">
+   
+	<title></title>
+</head>
+<body>
+	<div class = "weather-app">
+	 <div class = "container"> 
+	   <h3 class = "brand">Weather Report</h3>
 
+         <div class="null">
+        <h1 class="temp">16&#176;<span >C</span></h1>
+        
+        <div class="city-name">
+            
+            <h1 class="name">Bengaluru</h1>
+            
+                <span class="time">06:09</span>
+                <span class="date">Monday Sep 19</span>
+            
+        </div>
+
+        <div class="weather">
+            <img 
+            src =" https://cdn0.iconfinder.com/data/icons/abstract-suns-glyph-icons/310/sun-weather-flower-yellow-abstract-shape-sunset_23-512.png"
+            class="icon"
+            alt="icon"
+            width="60"
+            height="60" 
+         /> 
+         <span class="condition">Cloudy</span>
+        </div>
+        </div> 
+     
+     <div class="panel">
+        <form id="locationInput">
+            <input type="text" class="search" placeholder="Search Location..."/>
+            <button type="submit" class="submit" ><i class="fa fa-search"></i></button>
+
+        </form>
+
+     
+
+    <ul class="cities" type="round">
+        <li ><span class="city">Mumbai</span> </li>
+        <li ><span class="city">New Delhi</span> </li>
+        <li ><span class="city">Kolkata</span> </li>
+        <li ><span class="city">Goa</span> </li>
+        <li ><span class="city">Ahmedabad</span> </li>
+
+    </ul>
+    
+    <ul class="details">
+        <h4>Weather details</h4>
+         <li>
+            <span> Cloudy </span>
+            <span class="cloud"> 89% </span>
+         </li>
+         <li>
+            <span> Humidity  
+            <span class="humidity">  64%</span> </span>
+         </li>
+         <li>
+            <span> Wind
+            <span class="wind">  8km/h</span></span>
+         </li>
+    </ul>
+  </div>
+  </div>
+</div>
+
+<script src="./weather.js"></script>
+
+</body>

@@ -1,0 +1,227 @@
+
+body{
+    
+    margin:0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: #121010;
+}
+
+* {
+   box-sizing: border-box;
+}
+
+h1,h3{
+    color:rgb(219, 207, 207);
+    font-weight: 400;
+}
+h4{
+    font-size: x-large;
+}
+.brand{
+    font-size: 2em;
+}
+
+
+.weather-app{
+    min-height:100vh;
+    background-image: url('https://wallup.net/wp-content/uploads/2019/10/336103-sky-clouds-scenery-sunset-beautiful-nature-landscape.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color:#fff;
+    position: relative;
+    transition:500ms;
+    opacity:0;  
+}   
+
+.weather-app::before{
+   content:"";
+   position:absolute;
+   left:0;
+   top:0;
+   width:100%;
+   height:100%;
+   background:rgba(0, 0, 0, 0.3);
+   z-index: 0;
+
+}
+
+.container{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction:column;
+    padding: 2em 3em 4em 2em;
+}
+
+.container > div {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.city-time,
+.temp, 
+.weather {
+    margin : 0 1em;
+}
+.time, .date, .condition{
+  font-size: 1.7em;
+}
+
+.city-name h1{
+    margin:0;
+    margin-bottom:0.2em;
+    font-size:3.8em;
+}
+.city-name{
+    margin-left:25px;
+    
+}
+
+.temp {
+    font-size: 6.9em;
+    margin:0;
+}
+
+.weather img {
+    display :block;
+    margin: 0.6em 0em;
+}
+
+.panel {
+    position: absolute;
+    width: 36%;
+    height: 100%;
+    display: flex;
+    top:0;
+    right: 0;
+    background: rgba(95, 95, 91, 0.25);
+    box-shadow: 0px 8px 32px 0px rgba(0, 0 , 0 , 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border:1px solid rgba(254, 249, 249, 0.18);
+    z-index: 1;
+    padding: 3em 2em;
+    overflow-y:scroll;
+}
+
+.panel form{
+    margin-top: 1em; 
+    
+}
+
+.submit {
+    position: absolute;
+    top:0;
+    right:0;
+    padding:1.3em;
+    margin:0;
+    border: none;
+    outline:none;
+    background: #fa6d1b;
+    color:#fff;
+    cursor:pointer;
+    font-size: 1.2em;
+    transition:0.4s;
+    
+}
+
+.submit:hover{
+    background: #fff !important;
+    color:#000;
+}
+
+.search{
+    background:none;
+    border:none;
+    border-bottom: 1px #d1c9c9 solid;
+    margin-right: 10px;
+    padding: 0 4em 0 0;
+    width:80%;
+    height:50px;
+    color:#fff;
+    font-size:1.3em;
+    margin-bottom: 32em;
+
+}
+
+.search:focus{
+    outline:none;
+}
+
+.search::placeholder{
+    color:#d5cccc;
+}
+
+.panel ul{
+    padding: 0 0 1em 0;
+    margin:1em 0;
+    border-bottom: 1px #ccc solid;
+}
+
+.panel ul li {
+    color:#ccc;
+    margin: 1em 8em 1em 0;
+    font-size: x-large;
+}
+
+.panel ul h4{ 
+    margin:5em 0 1.5em 0;
+}
+
+.city{
+    cursor:pointer;
+    display:block;
+}
+
+.city:hover{
+    color:#fff;
+}
+
+.cities {
+    position: absolute;
+    top: 100px;
+    margin-bottom: 50px;
+}
+.details {
+    position: absolute;
+    top:350px;
+}
+.details li{
+    display:flex;
+    justify-content:space-around;
+    align-items:left;
+    flex-direction: row;
+}
+.cloud, .humidity{
+    margin-left: 45px;
+}
+ .wind{
+   margin-left: 27px;
+}
+
+
+@media screen and (max-width: 800px) {
+    .panel, .container{
+        position:relative;
+        width:100%;
+        top:initial;
+    }
+}
+@media screen and (max-width: 500px) {
+    html{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 300px) {
+    .weather-app{
+       min-width: 40em;
+    }
+}
+
