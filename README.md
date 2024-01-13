@@ -2,7 +2,7 @@
 
 Click on the link below to view screenshots of the website
 
-**Google Drive :** [https://drive.google.com/file/d/1z8txjBMJDF3SOdWAbbyxxAARmFVjQpkg/view?usp=drivesdk](https://drive.google.com/file/d/1z8txjBMJDF3SOdWAbbyxxAARmFVjQpkg/view?usp=drivesdk)
+**Google Drive :** [View Screenshots](https://drive.google.com/file/d/1z8txjBMJDF3SOdWAbbyxxAARmFVjQpkg/view?usp=drivesdk)
 
 QuickTaskPoint is a multi-functional web application that allows users to perform four different tasks seamlessly. The landing page provides quick access to the following features:
 
