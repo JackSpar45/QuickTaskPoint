@@ -1,0 +1,118 @@
+* {
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+
+}
+
+.container{
+    width:100%;
+    min-height:100vh;
+    background: linear-gradient(-135deg, #098eab, #7d069e);
+    padding:10px;
+}
+
+.To-do-app{
+    width:100%;
+    max-width:580px;
+    background:#fff;
+    margin:100px auto 20px;
+    padding:40px 30px 70px;
+    border-radius : 10px;
+}
+.To-do-app h1{
+    color:#002765;
+    display:flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: center;
+    font-size:3em;
+
+}
+
+.To-do-app h1 img{
+    width:47px;
+    margin:0 0 15px 10px;
+}
+.row{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    background:#e2e4e8;
+    border-radius:30px;
+    padding-left:20px;
+    margin-bottom:25px;
+}
+
+input{
+    flex:1;
+    border:none;
+    outline:none;
+    background:transparent;
+    padding:6px;
+    font-weight:16px;
+    font-size:large;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style:cursive;
+
+}
+button{
+    border:none;
+    outline:none;
+    padding:16px 50px;
+    background:#ff5945;
+    color:#fff;
+    border-radius: 30px;
+    font-size:19px;
+    cursor:pointer;
+}
+
+ul li{
+    list-style: none;
+    font-size: 22px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style:cursive;
+    padding:18px 8px 12px 50px;
+    user-select:none; /* disables text selection*/
+    cursor:pointer;
+    position:relative;
+
+}
+
+ul li::before{
+    content:'';
+    position:absolute;
+    height:28px;
+    width:28px;
+    border-radius:50%;
+    background-image:url('https://th.bing.com/th/id/OIP.P29SkYey49TuE75jAz_4TQAAAA?rs=1&pid=ImgDetMain');
+    background-size: cover;
+    background-position:cover;
+    top:18px;
+    left:8px;
+}
+
+ul li.checked{
+    color:#555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+
+     background-image: url('https://flatfeerecruiter.co.uk/app/uploads/2022/12/icon_tick_orange.png');
+}
+ul li span{
+    position:absolute;
+    right: 0;
+    top:5px;
+    width:45px;
+    height:45px;
+    font-size: 30px;
+    color: #555;
+    line-height: 47px;
+    text-align:center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background: #edeef0;
+}
