@@ -1,1 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculator</title>
+    <style>
+        
+        
+        #calculator {
+            width: 300px;
+            margin: auto;
+            margin-top: 100px;
+            border: 12px solid #322f2f;
+            padding: 10px;
+            text-align: center;
+            background-color: rgb(155, 141, 141);
+            backdrop-filter: blur(10px);
+            /* background: rgba(255, 0, 0, 0); */
+            border-radius: 10px;
+        }
+        input[type="text"] {
+            width: 85%;
+            margin-bottom: 10px;
+            padding: 6.5px;
+            font-size: 1.25em;
+        }
+        #display{
+            height: 30px;
+            border-radius: 5px;
+            
+        }
+        button {
+            width: 45px;
+            height: 45px;
+            margin: 6px;
+            font-size: 25px;
+            color: white;
+            background-color: #322f2f;
+           /*   background-color: #6d8691;*/
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <input type="text" id="display" placeholder="Start calculating..." readonly>
+
+        <button onclick="appendNumber(7)">7</button>
+        <button onclick="appendNumber(8)">8</button>
+        <button onclick="appendNumber(9)">9</button>
+        <button style = "background-color:rgb(248, 131, 42); color:black ; padding-right: 5px; padding-left: 3px;" onclick="clearDisplay()">AC</button>
+        <br>
+
+        <button onclick="appendNumber(4)">4</button>
+        <button onclick="appendNumber(5)">5</button>
+        <button onclick="appendNumber(6)">6</button>
+        <button onclick="appendOperator('+')">+</button>
+       
+        <br>
+        
+        <button onclick="appendNumber(1)">1</button>
+        <button onclick="appendNumber(2)">2</button>
+        <button onclick="appendNumber(3)">3</button>
+        <button onclick="appendOperator('-')">-</button>
+        <br>
+        
+        <button onclick="appendNumber(0)">0</button>
+        <button onclick="appendOperator('.')">.</button>
+        <button onclick="calculate()">=</button>
+        <button style =" font-size: 0.95em; " onclick="appendOperator('*')">x</button>
+       
+        <br>
+        
+        <button style="width: 106px; font-size: 17px; margin-right: 9px;" onclick="goback()">BACK</button>
+        <button style =" font-size: 0.89em;" onclick="calculatePercentage()">%</button>
+        <button  onclick="appendOperator('/')">÷</button>
+        
+       
+    </div>
+
+    <script>
+        const display = document.getElementById("display");
+        let currentInput = "";
+
+        function appendNumber(number) {
+            currentInput += number;
+            display.value = currentInput;
+        }
+
+        function appendOperator(op) {
+            currentInput += op;
+            display.value = currentInput;
+        }
+
+        function clearDisplay() {
+            currentInput = "";
+            display.value = "";
+        }
+
+        function goback() {
+            currentInput = currentInput.slice(0, -1);// Removes last char of string
+            display.value = currentInput;
+        }
+
+        function calculate() {
+            try {
+                const result = evaluateExpression(currentInput);
+                display.value = result;
+                currentInput = result.toString();
+            } catch (error) {
+                display.value = "Error";
+            }
+        }
+
+        function calculatePercentage() {
+            try {
+                const result = evaluateExpression(currentInput) / 100;
+                display.value = result;
+                currentInput = result.toString();
+            } catch (error) {
+                display.value = "Error";
+            }
+        }
+
+        function evaluateExpression(expression) {
+            
+            return Function('"use strict"; return (' + expression + ')')();
+        }
+    </script>
+</body>
+</html>
 
